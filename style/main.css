@@ -1,0 +1,1360 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/montserrat/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: Montserrat-ExtraBold;
+  src: url("../fonts/montserrat/Montserrat-ExtraBold.ttf");
+}
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../fonts/montserrat/Montserrat-Medium.ttf");
+}
+@font-face {
+  font-family: "PloniMLv2AAA-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PloniMLv2AAA-Regular"), url("PloniRegular.woff") format("woff");
+}
+@font-face {
+  font-family: "PloniMLv2AAA-U-Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PloniMLv2AAA-U-Light"), url("PloniULight.woff") format("woff");
+}
+@font-face {
+  font-family: "PloniMLv2AAA-Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PloniMLv2AAA-Light"), url("PloniLight.woff") format("woff");
+}
+@font-face {
+  font-family: "PloniMLv2AAA-Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PloniMLv2AAA-Medium"), url("PloniMedium.woff") format("woff");
+}
+@font-face {
+  font-family: "PloniMLv2AAA-D-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PloniMLv2AAA-D-Bold"), url("PloniDBold.woff") format("woff");
+}
+@font-face {
+  font-family: "PloniMLv2AAA-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PloniMLv2AAA-Bold"), url("PloniBold.woff") format("woff");
+}
+@font-face {
+  font-family: "PloniMLv2AAA-U-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PloniMLv2AAA-U-Bold"), url("PloniUBold.woff") format("woff");
+}
+@font-face {
+  font-family: "PloniMLv2AAA-Black";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PloniMLv2AAA-Black"), url("PloniBlack.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.changingtext {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Open Sans", sans-serif;
+}
+
+.containertext .text {
+  position: relative;
+  color: #4070F4;
+  font-size: 3.375rem;
+  font-weight: 800;
+  margin-left: 15px;
+}
+
+.containertext .text.first-text {
+  color: #6919ff;
+}
+
+.containertext .text.sec-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #060918;
+  border-right: 2px solid #FFFFFF;
+  animation: animate 2s steps(12) infinite;
+}
+
+@keyframes animate {
+  40%, 60% {
+    right: calc(100% + 4px);
+  }
+  100% {
+    right: 0%;
+  }
+}
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  /* stop ios zooming text  on orientation change */
+  -moz-text-size-adjust: 100%;
+       text-size-adjust: 100%;
+  line-height: 1.5;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  direction: rtl;
+}
+
+#header {
+  width: 100%;
+  height: 100vh;
+  background-color: #6919ff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+#header h1 {
+  text-align: center;
+  font: normal normal normal 136px/173px PloniMLv2AAA-Bold;
+  letter-spacing: 0px;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#menu {
+  width: 70vw;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  margin-top: 10px;
+  position: fixed;
+  display: flex;
+  align-self: center;
+  border: 2px solid rgba(0, 0, 0, 0);
+  transition: background-color 0.3s, border 0.3s;
+  transition: 0.5s;
+  z-index: 999;
+}
+
+#menu.scrolled {
+  background-color: rgba(6, 9, 24, 0.5019607843);
+  border: 2px solid #fff;
+  transition: background-color 0.3s, border 0.3s;
+}
+
+#menu.scrolled ul li:hover {
+  color: #6919ff;
+  transition: 0.3s;
+}
+
+#menu ul li {
+  list-style-type: none;
+  float: right;
+  padding: 10px;
+  height: 100%;
+  font: normal normal normal 31px/35px PloniMLv2AAA-Bold;
+  margin-left: 10px;
+  position: relative;
+  margin-right: 10px;
+  letter-spacing: 0px;
+  color: white;
+  transition: 0.5s;
+}
+
+#menu ul li a {
+  color: white;
+  text-decoration: none;
+  transform: 0.3s;
+  transform: 0.3s;
+}
+
+#menu ul li a:hover {
+  border-bottom: 2px solid white;
+  transform: 0.3s;
+}
+
+.btn {
+  border: 2px solid #fff;
+  overflow: hidden;
+  border-radius: 10px;
+  font: normal normal normal 31px/37px PloniMLv2AAA-Bold;
+  position: absolute;
+  padding: 0px 10px 0px 10px;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  letter-spacing: 0px;
+  color: #fff;
+  text-decoration: none;
+}
+.btn span {
+  z-index: 20;
+}
+.btn:after {
+  background: #fff;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.7;
+  position: absolute;
+  top: -50px;
+  transform: rotate(35deg);
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+  width: 50px;
+  z-index: -10;
+}
+
+.btn:hover:after {
+  left: 120%;
+  transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button-77 {
+  align-items: center;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  flex-direction: row;
+  flex-shrink: 0;
+  font-family: "PloniMLv2AAA-Bold";
+  font-size: 22px;
+  font-weight: 800;
+  justify-content: center;
+  line-height: 24px;
+  margin: 0;
+  margin-top: 20px;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: auto;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .button-77 {
+    padding: 19px 32px;
+  }
+}
+a.cv {
+  text-decoration: none;
+  color: white;
+}
+
+.button-77:before,
+.button-77:after {
+  border-radius: 80px;
+}
+
+.button-77:before {
+  background-color: rgba(105, 25, 255, 0.2862745098);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.button-77:after {
+  background-color: #6919ff;
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.button-77:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.button-77:active:not(:disabled) {
+  color: #6919ff;
+}
+
+.button-77:active:not(:disabled):after {
+  background-color: #fff;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.button-77:disabled {
+  cursor: default;
+  opacity: 0.24;
+}
+
+.hit a {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font: normal normal normal 31px/37px PloniMLv2AAA-Bold;
+  letter-spacing: 0px;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  padding: 0px 10px 0px 10px;
+  left: 5px;
+  top: 6px;
+  bottom: 6px;
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.hit a:hover {
+  background-color: rgba(255, 255, 255, 0.4431372549);
+  transition: 0.3s;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 4px;
+  z-index: -1;
+}
+
+.test {
+  height: 100vh;
+  width: 80px;
+}
+
+.rightdoor {
+  right: 0;
+  top: 0;
+  background-image: url(../images/door.png);
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 0;
+  background-size: cover;
+  transition: 0.1s;
+  animation: myfirst 2s 1;
+  animation-duration: 3s;
+  animation-direction: normal;
+  -webkit-animation-direction: normal;
+}
+@keyframes myfirst {
+  0% {
+    left: 0%;
+    width: 22%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+.leftdoor {
+  left: 0;
+  top: 0;
+  background-image: url(../images/door.png);
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 0;
+  background-size: cover;
+  transition: 0.1s;
+  rotate: 180deg;
+  animation: myfirstt 2s 1;
+  animation-duration: 3s;
+  animation-direction: normal;
+  -webkit-animation-direction: normal;
+}
+@keyframes myfirstt {
+  0% {
+    width: 22%;
+    left: 0;
+  }
+  100% {
+    width: 0px;
+  }
+}
+.welcome h1 {
+  font-size: 24px;
+  /* Adjust font size as needed */
+  position: relative;
+  display: inline-block;
+}
+
+.welcome h1 span {
+  display: inline-block;
+}
+
+/* Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+.bouncing {
+  animation: bounce 0.6s;
+}
+
+.container-about {
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  /* Two columns with equal width */
+  grid-template-rows: 100vh;
+  /* One row with full height */
+  background-color: #060918;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.container-right {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 80%;
+  grid-template-rows: 100vh;
+  align-items: center;
+  justify-items: start;
+}
+.container-right .content {
+  padding: 4rem;
+  grid-column: 1/3;
+}
+.container-right h2 {
+  background-color: #100b30;
+  color: #6919ff;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-family: "PloniMLv2AAA-light";
+  border: 1px solid rgba(105, 25, 255, 0.3019607843);
+}
+.container-right h3 {
+  color: #fff;
+  font-family: "PloniMLv2AAA-BOLD";
+  font-size: 3rem;
+}
+.container-right p {
+  color: #fff;
+  font-family: "PloniMLv2AAA-light";
+  text-align: justify;
+  font-size: 1.31rem;
+}
+
+.container-left {
+  background-image: url(https://www.hartman.org.il/wp-content/uploads/2020/04/Man-on-mountain-waving-Israeli-flag_AdobeStock_217465495-resized.jpg);
+  background-size: cover;
+  opacity: 0.7;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+}
+
+.container-projects {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #060918;
+  min-height: 1000px;
+}
+.container-projects h3 {
+  background-color: #100b30;
+  color: #6919ff;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.3rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  border-radius: 999px;
+  font-family: "PloniMLv2AAA-light";
+  border: 1px solid rgba(105, 25, 255, 0.3019607843);
+}
+.container-projects p {
+  color: #fff;
+  font-family: "PloniMLv2AAA-light";
+  width: 50%;
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 30px;
+}
+
+.multi-item-carousel .carousel-inner > .item {
+  transition: 500ms ease-in-out left;
+}
+.multi-item-carousel .carousel-inner .active.left {
+  left: -33%;
+}
+.multi-item-carousel .carousel-inner .active.right {
+  left: 33%;
+}
+.multi-item-carousel .carousel-inner .next {
+  left: 33%;
+}
+.multi-item-carousel .carousel-inner .prev {
+  left: -33%;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .multi-item-carousel .carousel-inner > .item {
+    transition: 500ms ease-in-out left;
+    transition: 500ms ease-in-out all;
+    backface-visibility: visible;
+    transform: none !important;
+  }
+}
+.multi-item-carousel .carouse-control.left, .multi-item-carousel .carouse-control.right {
+  background-image: none;
+}
+
+.container-projects {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  max-width: 1600px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.wrapper i {
+  top: 50%;
+  z-index: 99;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: hwb(230 2% 91%/0.712);
+  border: 1px solid #898a84;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+  left: -22px;
+}
+
+.wrapper i:last-child {
+  right: -22px;
+}
+
+i.fa.fa-bars {
+  display: none;
+}
+
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 90px) / 4);
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.project-info {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+article button {
+  width: 45%;
+  height: 40px;
+  margin-top: 5px;
+  background: #060918;
+  border: 0;
+  border: 2px solid white;
+  color: white;
+  font-family: "PloniMLv2AAA-Bold";
+  font-size: 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+article button:hover {
+  background: #6519f4;
+  transition: 0.5s;
+  box-shadow: 0px 0px 5px white;
+}
+
+.project-info a {
+  text-decoration: none;
+  color: white;
+}
+
+.card article {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  height: 500px;
+  border: 1px solid rgba(255, 254, 249, 0.3019607843);
+  list-style: none;
+  background-size: cover;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-top: 50px;
+  color: #fff;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+  color: #fff;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+  font-size: 4rem;
+  font-family: "PloniMLv2AAA-bold";
+}
+
+.letter {
+  font-size: 5rem;
+}
+
+.card:hover article {
+  opacity: 1;
+  transition: 0.5s ease-in;
+}
+
+.card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: blur(0);
+  transition: filter 0.3s ease;
+}
+
+.carousel .card h2 {
+  font-weight: 500;
+  font-family: "PloniMLv2AAA-bold";
+  font-size: 2.5rem;
+  width: 90%;
+}
+
+.card:hover img {
+  filter: blur(5px) brightness(30%);
+}
+
+.carousel .card span {
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: "PloniMLv2AAA-light";
+}
+
+.buttons a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.buttons a:hover {
+  color: #000;
+}
+
+.animated-link {
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  /* Adjust color as needed */
+}
+
+.animated-link:hover i {
+  animation: bounce 0.5s alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-5px);
+  }
+}
+.container-pro {
+  width: 80%;
+  background: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 0 auto;
+  font-size: 50px;
+}
+
+.container-pro img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container-contact {
+  height: 100vh;
+  width: 100%;
+  background: #6919ff;
+  display: flex;
+  direction: ltr;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact1 {
+  width: 100%;
+  min-height: 100%;
+  padding: 15px;
+  background: #060918;
+  background: linear-gradient(left, #0072ff, #00c6ff);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-contact1 {
+  width: 1163px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 130px 88px 148px;
+}
+
+.contact1-pic {
+  width: 296px;
+}
+
+.contact1-pic img {
+  max-width: 100%;
+}
+
+.contact1-form {
+  width: 390px;
+  direction: rtl;
+}
+
+.contact1-form-title {
+  display: block;
+  font-family: "PloniMLv2AAA-Bold";
+  font-size: 42px;
+  color: rgb(6, 9, 24);
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 44px;
+}
+
+input.input1 {
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px;
+  border: 0;
+}
+
+input.input1 + .shadow-input1 {
+  border-radius: 25px;
+}
+
+textarea.input1 {
+  min-height: 150px;
+  border-radius: 25px;
+  padding: 12px 30px;
+  border: 0;
+}
+
+textarea.input1 + .shadow-input1 {
+  border-radius: 25px;
+}
+
+/*---------------------------------------------*/
+.wrap-input1 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.input1 {
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  font-family: "PloniMLv2AAA-Bold";
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.shadow-input1 {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(105, 25, 255, 0.5);
+}
+
+.input1:focus + .shadow-input1 {
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 80px 30px;
+    opacity: 0;
+  }
+}
+/*---------------------------------------------*/
+.container-contact1-form-btn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact1-form-btn {
+  min-width: 193px;
+  height: 50px;
+  direction: rtl;
+  border-radius: 10px;
+  background: #6919ff;
+  font-family: "PloniMLv2AAA-Bold";
+  font-size: 20px;
+  color: #fff;
+  display: -webkit-flex;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  transition: all 0.4s;
+}
+
+.contact1-form-btn i {
+  margin-right: 10px;
+  transition: all 0.4s;
+}
+
+.contact1-form-btn:hover {
+  background: #060918;
+}
+
+.contact1-form-btn:hover i {
+  transform: translateX(10px);
+}
+
+@media (max-width: 1200px) {
+  .contact1-pic {
+    width: 33.5%;
+  }
+  .contact1-form {
+    width: 44%;
+  }
+}
+@media (max-width: 992px) {
+  .container-contact1 {
+    padding: 90px 80px 88px 90px;
+  }
+  .contact1-pic {
+    width: 35%;
+  }
+  .contact1-form {
+    width: 55%;
+  }
+}
+@media (max-width: 768px) {
+  .container-contact1 {
+    padding: 90px 80px 88px 80px;
+  }
+  .contact1-pic {
+    display: none;
+  }
+  .contact1-form {
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .container-contact1 {
+    padding: 90px 15px 88px 15px;
+  }
+}
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #c80000;
+  border-radius: 10px;
+  padding: 4px 10px 4px 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  left: 8px;
+  font-family: "PloniMLv2AAA-medium";
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 13px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+* {
+  cursor: none;
+}
+
+.cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255);
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  z-index: 1000000000000000000000000000000000000000000000000;
+  opacity: 0.3;
+}
+
+.cursor2 {
+  z-index: 1000000000000000000000000000000000000000000000000;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+}
+
+.hover {
+  background-color: black;
+  opacity: 0.8;
+}
+
+.cursorinnerhover {
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+}
+
+
+#footer {
+  height: 50px;
+  background-color: #121212;
+  font: normal normal normal 35px/39px PloniMLv2AAA-Light;
+  color: white;
+  padding: 5px 15px 5px 5px;
+  border-top: 1px solid #707070;
+}
+
+@media screen and (max-width: 1650px) {
+  article button {
+    font-size: 14px;
+  }
+  .container-projects p {
+    color: #fff;
+    font-family: "PloniMLv2AAA-light";
+    text-align: center;
+    font-size: 1.2rem;
+    width: 50%;
+    margin: 30px;
+  }
+  .container-right p {
+    color: #fff;
+    font-family: "PloniMLv2AAA-light";
+    text-align: center;
+    font-size: 1.31rem;
+  }
+  .wrapper {
+    width: 90vw;
+  }
+  .btn {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 25px;
+    top: 4px;
+    z-index: -1;
+    right: auto;
+  }
+}
+@media (max-width: 576px) {
+  .container-contact1 {
+    margin-top: 50px;
+  }
+  .wrapper .carousel {
+    grid-auto-columns: calc(50% - 12px);
+  }
+  .wrapper {
+    width: 80vw;
+  }
+  #header h1 {
+    font: normal normal normal 100px/100px PloniMLv2AAA-Bold;
+  }
+  .container-right .content {
+    padding: 1rem;
+  }
+  .container-right {
+    grid-template-columns: 1fr;
+  }
+  .container-projects h3,
+  .container-right h2 {
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.1rem;
+  }
+  .container-projects p {
+    width: 85%;
+    font-size: 1.5rem;
+  }
+  .container-projects {
+    padding-top: 50px;
+  }
+  .carousel .card {
+    height: 300px;
+  }
+  .btn {
+    font: normal normal normal 22px/38px PloniMLv2AAA-Bold;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc(33.3333333333% - 20px);
+  }
+  article button {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 968px) {
+  .containertext .text {
+    font-size: 2.375rem;
+  }
+  .container-projects p {
+    color: #fff;
+    font-family: "PloniMLv2AAA-light";
+    text-align: center;
+    font-size: 1.2rem;
+    width: 90%;
+    margin: 30px;
+  }
+  .container-about {
+    height: 100%;
+    background-color: #060918;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+  }
+  .container-right .content {
+    padding: 4rem;
+    grid-column: 1/3;
+  }
+  .wrapper .carousel {
+    grid-auto-columns: calc(50% - 15px);
+  }
+  i.fa.fa-bars {
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 45px;
+    display: block;
+  }
+  i.fa.fa-solid.fa-x {
+    color: white;
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 45px;
+    display: block;
+  }
+  .icon {
+    display: block;
+    color: white;
+    float: right;
+    padding: 0px 15px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .menu1 {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    background-color: rgba(6, 9, 24, 0.5019607843);
+    overflow: hidden;
+  }
+  .menu1 a {
+    float: right;
+    display: block;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    padding: 20px 20px;
+    text-decoration: none;
+    width: 80%;
+    border-bottom: 1px solid #2e364f;
+    text-align: right;
+  }
+  #myLinks {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9000;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+  #menu {
+    width: 90vw;
+  }
+  #menu {
+    width: 90vw;
+    z-index: 9999;
+  }
+  #menu ul li {
+    display: none;
+  }
+  #doors {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 85vw;
+  }
+  .wrapper .carousel {
+    grid-auto-columns: calc(33.3333333333% - 9px);
+  }
+  #header h1 {
+    font: normal normal normal 100px/101px PloniMLv2AAA-Bold;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+  .menu1 a:hover {
+    background-color: rgba(221, 221, 221, 0.1490196078);
+    color: white;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: -10px;
+    top: 8px;
+    z-index: -1;
+    bottom: 0;
+    right: auto;
+  }
+  .logo img {
+    height: 80%;
+  }
+  .container-about {
+    height: 100%;
+    background-color: #060918;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+  }
+}/*# sourceMappingURL=main.css.map */

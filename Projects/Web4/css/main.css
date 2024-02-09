@@ -1,0 +1,246 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  width: 100vw;
+  height: 100vh;
+}
+
+
+.line {
+  width: 434px;
+  height: 18px;
+  background: #FDBD03 0% 0% no-repeat padding-box;
+
+}
+
+.container {
+  width: 80vw;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.whatsapp {
+  background: #FDBD03 url(../images/ws.svg);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.fb {
+  background: #FDBD03 url(../images/fb.svg);
+  background-size: 40% !important;
+}
+
+.ig {
+  background: #FDBD03 url(../images/ig.svg);
+  background-size: 50% !important;
+}
+
+.in {
+  background: #FDBD03 url(../images/in.svg);
+  background-size: 50% !important;
+}
+
+.phone {
+  background: #FDBD03 url(../images/phone.svg);
+  background-size: 50%;
+}
+
+.circle {
+  background-size: 60%;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+
+.footer {
+  height: 18px;
+  background: #FDBD03 0% 0% no-repeat padding-box;
+  width: 60%;
+
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.icons {
+  display: flex;
+  float: left;
+  margin: 50px;
+  justify-content: space-between;
+  width: 25%;
+}
+
+.item1,
+.item2 {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+
+.item3 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  background: #E5EEFF 0% 0% no-repeat padding-box;
+  border: 0;
+  border-bottom: 4px solid #FDBD03;
+}
+
+h1 {
+  font: normal normal 900 66px/97px Heebo;
+  color: #FDBD03;
+}
+
+p {
+  font: normal normal normal 20px/29px Heebo;
+
+  color: #020253;
+}
+
+input.textarea {
+  width: 100%;
+  height: 143px;
+}
+
+button {
+  width: 166px;
+  height: 50px;
+  background: #FDBD03 0% 0% no-repeat padding-box;
+  border: 0;
+  font: normal normal bold 22px/30px Heebo;
+  margin-top: 50px;
+}
+
+label {
+  font: normal normal bold 16px/24px Heebo;
+  color: #2C2C2C;
+}
+
+.flex div {
+  margin-top: 20px;
+}
+
+@media (max-width: 767.98px) {
+  .container {
+    flex-direction: column;
+    margin-top: 25px;
+  }
+
+  .box img {
+    width: 25%;
+  }
+
+  .circle.whatsapp {
+    display: none;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .circle {
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    margin-top: 50px;
+  }
+
+  .icons {
+    display: flex;
+    float: left;
+    margin: 0px;
+    margin-bottom: 50px;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  button {
+    width: 80vw;
+    height: 50px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    border: 0;
+    font: normal normal bold 22px/30px Heebo;
+    margin-top: 50px;
+  }
+
+  .line {
+    width: 75vw;
+    height: 18px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+  }
+
+  .footer {
+    height: 18px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    width: 100%;
+    display: flex;
+    position: static;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  .item1,
+  .item2 {
+
+    width: 100%;
+  }
+
+  h1 {
+    font: normal normal 900 50px/97px Heebo;
+    color: #FDBD03;
+    text-align: center;
+  }
+
+  p {
+    font: normal normal normal 20px/29px Heebo;
+    color: #020253;
+    text-align: center;
+  }
+
+  button {
+    margin-top: 0px;
+
+  }
+}

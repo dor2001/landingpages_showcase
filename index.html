@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>דור בן אבו - Full Stack Developer</title>
+    <link rel="icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/util.css">
+    <script src="./js/main.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js" defer></script>
+
+
+
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <div id="container-main" class="container">
+        <div id="header">
+            <div id="doors">
+                <div class="rightdoor"></div>
+                <div class="leftdoor"></div>
+            </div>
+            <div class="menu" id="menu">
+                <ul>
+                    <a href="#">
+                        <li><a href="#doors">ראשי</a></li>
+
+                        <li><a href="#container-about">על עצמי</a></li>
+                        <li><a href="#container-projects">פרוייקטים</a></li>
+                </ul>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+
+                </a>
+
+                <div class="logo">
+                    <!-- <video aria-hidden="true" playsinline="" autoplay="" muted="">
+                        <source src="./images/logo.webm" type="video/webm"> -->
+                    <img src="./images/logo.png" alt="">
+                </div>
+
+                <a href="#contact" class="btn">דברו איתי</a>
+
+            </div>
+            <div class="menu1 responsive" id="myLinks">
+                <a href="#header">ראשי</a>
+                <a href="#about-content">על עצמי</a>
+                <a href="#container-projects">פרוייקטים</a>
+                <a href="#contact">צור קשר</a>
+            </div>
+            <div class="welcome">
+                <h1>ברוכים הבאים <br> לסטודיו שלי</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div id="container-about" class="container-about">
+        <div class="container-right" id="about-content">
+            <div class="content">
+
+                <h2>קצת עליי</h2>
+
+
+                <div class="changingtext">
+                    <div class="containertext">
+                        <span class="text first-text">אני</span>
+                        <span class="text sec-text"></span>
+                    </div>
+                </div>
+
+                <p>
+                    כאוהב טכנולוגיה, בניתי שרתי משחק, ניהלתי קהילות משחק והתמחיתי בתיקוני באגים וגילוי פריצות.
+                    כרגע משתתף בקורס פיתוח FULL STACK למשך 6 חודשים, מתרגש להפעיל את הידע והיכולות שלי בעולם הפיתוח כדי
+                    ליצור פתרונות
+                    חדשניים ויעילים
+                </p>
+                <button class="button-77" role="button"><a href="./cv.pdf" class="cv">קורות חיים</a></button>
+
+            </div>
+        </div>
+        <div class="container-left">
+
+        </div>
+    </div>
+
+    <div id="container-projects" class="container-projects">
+        <h3>הפרוייקטים שלי</h3>
+        <p>
+            הפרוייקטים שלי מתארים את היכולות המודרניות והייחודיות שבפיתוח, ומתאימים אישית לצרכי הלקוחות.
+        </p>
+
+        <div class="wrapper">
+            <i id="left" class="fa-solid fa-angle-left"></i>
+            <ul class="carousel">
+
+                <li class="card">
+                    <article>
+                        <h2>תן לנו להוביל אותך</h2>
+                        <span>אוגוסט 23</span>
+                        <div class="project-info">
+                            <button><a href="./Projects/Web2/index.html">לצפייה בפרוייקט</a></button>
+
+                            <button><a href="./Projects/Web2/Web2.zip">להורדת בפרוייקט</a></button>
+                        </div>
+                    </article>
+                    <img style="object-fit: cover; width: 100%; height: 100%;" src="./images/headyou.png" alt="">
+                </li>
+                <li class="card">
+                    <article>
+                        <h2>לגלות את העולם</h2>
+                        <span>אוגוסט 23</span>
+                        <div class="project-info">
+                            <button><a href="./Projects/Web1/index.html">לצפייה בפרוייקט</a></button>
+
+                            <button><a href="./Projects/Web1/Web1.zip">להורדת בפרוייקט</a></button>
+                        </div>
+                    </article>
+                    <img style="object-fit: cover; width: 100%; height: 100%;" src="./images/researchworld.png" alt="">
+                </li>
+                <li class="card">
+                    <article>
+                        <h2>ייעוץ חינם</h2>
+                        <span>אוגוסט 23</span>
+                        <div class="project-info">
+                            <button><a href="./Projects/Web4/index.html">לצפייה בפרוייקט</a></button>
+
+                            <button><a href="./Projects/Web4/Web4.zip">להורדת בפרוייקט</a></button>
+                        </div>
+                    </article>
+                    <img style="object-fit: cover; width: 100%; height: 100%;" src="./images/freey.png" alt="">
+                </li>
+                <li class="card">
+                    <article>
+                        <h2>תן לנו להוביל אותך קדימה</h2>
+                        <span>אוגוסט 23</span>
+                        <div class="project-info">
+                            <button><a href="./Projects/Web3/index.html">לצפייה בפרוייקט</a></button>
+
+                            <button><a href="./Projects/Web3/Web3.zip">להורדת בפרוייקט</a></button>
+                        </div>
+                    </article>
+                    <img style="object-fit: cover; width: 100%; height: 100%;" src="./images/leadyou.png" alt="">
+                </li>
+                <li class="card">
+                    <article>
+                        <h2>כאן ועכשיו!</h2>
+                        <span>אוגוסט 23</span>
+                        <div class="project-info">
+                            <button><a href="./Projects/Web6/index.html">לצפייה בפרוייקט</a></button>
+
+                            <button><a href="./Projects/Web6/Web6.zip">להורדת בפרוייקט</a></button>
+                        </div>
+                    </article>
+                    <img style="object-fit: cover; width: 100%; height: 100%;" src="./images/herenow.png" alt="">
+                </li>
+                <li class="card">
+                    <article>
+                        <h2>קפה טוב לבוקר טוב</h2>
+                        <span>אוגוסט 23</span>
+                        <div class="project-info">
+                            <button><a href="./Projects/Web5/index.html">לצפייה בפרוייקט</a></button>
+
+                            <button><a href="./Projects/Web5/Web5.zip">להורדת בפרוייקט</a></button>
+                        </div>
+                    </article>
+                    <img style="object-fit: cover; width: 100%; height: 100%;" src="./images/coffe.png" alt="">
+                </li>
+                <!-- <li class="card">
+                    <article>
+                        <h2>לחשוב מחוץ לקופסא</h2>
+                        <span>אוגוסט 23</span>
+                        <div class="project-info">
+                            <button><a href="#">לצפייה בפרוייקט</a></button>
+
+                            <button><a href="#">להורדת בפרוייקט</a></button>
+                        </div>
+                    </article>
+                    <img style="object-fit: cover; width: 100%; height: 100%;" src="./images/box.png" alt="">
+                </li> -->
+
+            </ul>
+            <i id="right" class="fa-solid fa-angle-right"></i>
+        </div>
+    </div>
+
+    <a div class="container-contact" id="contact">
+        <div class="contact1">
+            <div class="container-contact1">
+                <div class="contact1-pic js-tilt" data-tilt>
+                    <img src="images/img-01.png" alt="IMG">
+                </div>
+
+                <form class="contact1-form validate-form">
+                    <span class="contact1-form-title">
+                        <h3>
+                            צור קשר
+                        </h3>
+                    </span>
+
+                    <div class="wrap-input1 validate-input" data-validate="נדרש שם מלא">
+                        <input class="input1" type="text" name="name" placeholder="שם מלא">
+                        <span class="shadow-input1"></span>
+                    </div>
+
+                    <div class="wrap-input1 validate-input" data-validate="נדרש איימיל תקין: ex@abc.xyz">
+                        <input class="input1" type="text" name="email" placeholder='דוא"ל'>
+                        <span class="shadow-input1"></span>
+                    </div>
+
+                    <div class="wrap-input1 validate-input" data-validate="נדרש נושא">
+                        <input class="input1" type="text" name="subject" placeholder="נושא">
+                        <span class="shadow-input1"></span>
+                    </div>
+
+                    <div class="wrap-input1 validate-input" data-validate="נדרש הודעה">
+                        <textarea class="input1" name="message" placeholder="הודעה"></textarea>
+                        <span class="shadow-input1"></span>
+                    </div>
+
+                    <div class="container-contact1-form-btn">
+                        <button class="contact1-form-btn">
+                            <span>
+                                שלח מייל
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </a>
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="vendor/select2/select2.min.js"></script>
+
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+    <!-- <script>
+        var textWrapper = document.querySelector('.ml2');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        anime.timeline({ loop: true })
+            .add({
+                targets: '.ml2 .letter',
+                scale: [4, 1],
+                opacity: [0, 1],
+                translateZ: 0,
+                easing: "easeOutExpo",
+                duration: 950,
+                delay: (el, i) => 70 * i
+            }).add({
+                targets: '.ml2',
+                opacity: 0,
+                duration: 1000,
+                easing: "easeOutExpo",
+                delay: 1000
+            });
+    </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <!-- <div id="container-about">
+        <div class="dor">
+            <h1>
+                עליי נתונים,<br> הסבר של הלוגו ושפות
+            </h1>
+        </div>
+    </div>
+    <div id="container-projects">
+        <div class="project">
+            <h1>פרוייקט</h1>
+        </div>
+        <div class="project">
+            <h1>פרוייקט</h1>
+        </div>
+        <div class="project">
+            <h1>פרוייקט</h1>
+        </div>
+    </div>
+
+
+
+
+    <footer>
+        <div id="footer">
+            <p>כל הזכויות שמורות ל<span style="font-weight: bolder;">דור </span>בן אבו</p>
+        </div>
+
+    </footer> -->
+
+
+
+</body>
+
+</html>

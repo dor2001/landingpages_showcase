@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #020253;
+}
+
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.container-coffe {
+  width: 60%;
+  height: auto;
+  background: url(../images/Coffee.png);
+  background-size: cover;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  text-align: right;
+}
+
+.borders {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  align-content: center;
+}
+
+h1 {
+  font: normal normal 900 43px/63px Heebo;
+}
+
+p {
+  font: normal normal normal 20px/29px Heebo;
+}
+
+.flex div {
+  margin-top: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100% !important;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+input {
+  background: #E5EEFF 0% 0% no-repeat padding-box;
+  border: 0;
+  border-bottom: 4px solid #020253;
+  width: 100%;
+  height: 50px;
+}
+
+label {
+  font: normal normal bold 16px/24px Heebo;
+  color: #2c2c2c;
+}
+
+button {
+  background: #020253;
+  color: white;
+  border: 0;
+  font: normal normal bold 22px/30px Heebo;
+  width: 166px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 767.98px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .container-coffe {
+    width: 100%;
+    height: 270px;
+    background-position: center center;
+  }
+
+  .borders {
+    width: 80%;
+  }
+
+  input {
+    width: 80vw;
+  }
+
+  button {
+    width: 80vw;
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    font: normal normal 900 35px/63px Heebo;
+  }
+
+  .name {
+    width: 100%;
+  }
+
+  .email {
+    width: 100%;
+  }
+}
