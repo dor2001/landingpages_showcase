@@ -648,6 +648,17 @@ i.fa.fa-bars {
   scroll-behavior: smooth;
   scrollbar-width: none;
 }
+.wrapper .carousel2 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 90px) / 4);
+  gap: 30px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
 
 .project-info {
   position: absolute;
@@ -727,7 +738,42 @@ article button:hover {
   flex-direction: column;
   border-radius: 12px;
 }
+.carousel2::-webkit-scrollbar {
+  display: none;
+}
 
+.carousel2.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel2.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel2.dragging .card {
+  cursor: grab;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.carousel2 :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel2 .card {
+  scroll-snap-align: start;
+  height: 500px;
+  border: 1px solid rgba(255, 254, 249, 0.3019607843);
+  list-style: none;
+  background-size: cover;
+  cursor: pointer;
+  flex-direction: column;
+  border-radius: 12px;
+}
 .card img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -794,12 +840,23 @@ article button:hover {
   font-size: 2.5rem;
   width: 90%;
 }
+.carousel2 .card h2 {
+  font-weight: 500;
+  font-family: "PloniMLv2AAA-bold";
+  font-size: 2.5rem;
+  width: 90%;
+}
 
 .card:hover img {
   filter: blur(5px) brightness(30%);
 }
 
 .carousel .card span {
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: "PloniMLv2AAA-light";
+}
+.carousel2 .card span {
   color: #fff;
   font-size: 1.8rem;
   font-family: "PloniMLv2AAA-light";
@@ -1211,12 +1268,18 @@ textarea.input1 + .shadow-input1 {
   .carousel .card {
     height: 300px;
   }
+  .carousel2 .card {
+    height: 300px;
+  }
   .btn {
     font: normal normal normal 22px/38px PloniMLv2AAA-Bold;
   }
 }
 @media screen and (max-width: 1200px) {
   .wrapper .carousel {
+    grid-auto-columns: calc(33.3333333333% - 20px);
+  }
+  .wrapper .carousel2 {
     grid-auto-columns: calc(33.3333333333% - 20px);
   }
   article button {
@@ -1249,6 +1312,9 @@ textarea.input1 + .shadow-input1 {
     grid-column: 1/3;
   }
   .wrapper .carousel {
+    grid-auto-columns: calc(50% - 15px);
+  }
+  .wrapper .carousel2 {
     grid-auto-columns: calc(50% - 15px);
   }
   i.fa.fa-bars {
@@ -1323,12 +1389,18 @@ textarea.input1 + .shadow-input1 {
   .wrapper .carousel {
     grid-auto-columns: calc(33.3333333333% - 9px);
   }
+  .wrapper .carousel2 {
+    grid-auto-columns: calc(33.3333333333% - 9px);
+  }
   #header h1 {
     font: normal normal normal 100px/101px PloniMLv2AAA-Bold;
   }
 }
 @media screen and (max-width: 600px) {
   .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+  .wrapper .carousel2 {
     grid-auto-columns: 100%;
   }
   .menu1 a:hover {

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<div class="container">
+<div id="weatherInfo">
+
+   
+</div>
+<div class="swiper-container" id="hourlyForecast">
+    <div class="swiper-wrapper" id="hourlyForecastWrapper">
+       
+    </div>
+    <div class="swiper-button-prev1"><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" font-size="25" color="#ffff" height="1em"
+        width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 255, 255);">
+        <path d="M16.2426 6.34317L14.8284 4.92896L7.75739 12L14.8285 19.0711L16.2427 17.6569L10.5858 12L16.2426 6.34317Z"
+            fill="currentColor"></path>
+    </svg></div> 
+    <div class="swiper-button-next1"><svg stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24" font-size="25" color="#ffff" height="1em"
+        width="1em" xmlns="http://www.w3.org/2000/svg" style="color: rgb(255, 255, 255);">
+        <path d="M10.5858 6.34317L12 4.92896L19.0711 12L12 19.0711L10.5858 17.6569L16.2427 12L10.5858 6.34317Z"
+            fill="currentColor"></path>
+    </svg></div> 
+</div>
+    <div class="weekly-forecast" id="weeklyForecast">
+       
+    </div>
+    <div class="search">
+    <input type="text" id="searchInput" placeholder="Enter city or country">
+    <button id="searchButton">Search</button>
+    </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+<script src="script.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    direction: rtl;
+    background: url(./bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.calculator {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 5px;
+    padding: 47px;
+    box-shadow: 0px 0px 15px 0px rgb(90, 90, 90);
+}
+
+input[type="text"], #result,
+button {
+    padding: 10px;
+    margin: 5px;
+    background: #eeeeee;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+}
+
+button {
+    padding: 5px 20px 5px 20px;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: gray;
+    font-family: system-ui;
+    background: #eeeeee;
+    transition: .3s;
+}
+
+button:hover {
+    color: #323232;
+    background: #d5d5d5;
+    border: 1px solid #aaaaaa;
+
+}
+
+#result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.operations {
+    margin-bottom: 10px;
+}
+
+.selected {
+    background-color: #cbcbcb;
+    border: 1px solid #aaaaaa;
+    color: black;
+}
+.selected:hover {
+    background-color: #cbcbcb;
+}

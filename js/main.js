@@ -84,10 +84,19 @@ setInterval(textLoad, 6000)
 
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
+const carousel2 = document.querySelector(".carousel2");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
 const arrowBtns = document.querySelectorAll(".wrapper i");
 const carouselChildrens = [...carousel.children];
 
+
+        document.getElementById("left-2").addEventListener("click", function () {
+            carousel2.scrollLeft -= carousel2.offsetWidth;
+        });
+
+        document.getElementById("right-2").addEventListener("click", function () {
+            carousel2.scrollLeft += carousel2.offsetWidth;
+        });
 let isDragging = false, isAutoPlay = true, startX, startScrollLeft, timeoutId;
 
 // Get the number of cards that can fit in the carousel at once
@@ -107,6 +116,9 @@ carouselChildrens.slice(0, cardPerView).forEach(card => {
 carousel.classList.add("no-transition");
 carousel.scrollLeft = carousel.offsetWidth;
 carousel.classList.remove("no-transition");
+carousel2.classList.add("no-transition");
+carousel2.scrollLeft = carousel.offsetWidth;
+carousel2.classList.remove("no-transition");
 
 // Add event listeners for the arrow buttons to scroll the carousel left and right
 arrowBtns.forEach(btn => {
@@ -118,20 +130,24 @@ arrowBtns.forEach(btn => {
 const dragStart = (e) => {
     isDragging = true;
     carousel.classList.add("dragging");
+    carousel2.classList.add("dragging");
     // Records the initial cursor and scroll position of the carousel
     startX = e.pageX;
     startScrollLeft = carousel.scrollLeft;
+    startScrollLeft = carousel2.scrollLeft;
 }
 
 const dragging = (e) => {
     if (!isDragging) return; // if isDragging is false return from here
     // Updates the scroll position of the carousel based on the cursor movement
     carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+    carousel2.scrollLeft = startScrollLeft - (e.pageX - startX);
 }
 
 const dragStop = () => {
     isDragging = false;
     carousel.classList.remove("dragging");
+    carousel2.classList.remove("dragging");
 }
 
 const infiniteScroll = () => {
@@ -157,13 +173,17 @@ const autoPlay = () => {
     if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
     // Autoplay the carousel after every 2500 ms
     timeoutId = setTimeout(() => carousel.scrollLeft += firstCardWidth, 2500);
+    timeoutId = setTimeout(() => carousel2.scrollLeft += firstCardWidth, 2500);
 }
 autoPlay();
 
 carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
+carousel2.addEventListener("mousedown", dragStart);
+carousel2.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
+carousel2.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
 

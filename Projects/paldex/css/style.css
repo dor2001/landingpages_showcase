@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    color: #0e1015 !important;
+    font-family: arial;
+    flex-direction: column;
+    background: #0e1015;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    background-color: #0e1015;
+}
+
+.palCard {
+    display: flex;
+    width: 200px;
+    height: fit-content;
+    background: #13151b;
+    border: 2px solid #181a20;
+    margin: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: .5s;
+    align-content: center;
+    border-radius: 10px;
+    height: 350px;
+    align-items: center;
+}
+
+.palCard:hover {
+    border: 2px solid #f59e0b;
+
+}
+
+img.Pal {
+    margin: 25px 0 0 0;
+    height: 100px;
+    background: #181a20;
+    border-radius: 100%;
+}
+
+.palCard p {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.palInfo {
+    margin: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.mainElements {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.mainElements img {
+    margin: 0 5px 0 5px;
+}
+
+.elements p {
+    font-size: 0.8rem;
+}
+
+.elements img {
+    height: 30px;
+}
+
+hr {
+    height: 1px;
+    width: 80%;
+    border: 0;
+    background: #3f3f46;
+    margin: 10px 0 10px 0;
+}
+.search {
+    background: #0e1015;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+input#searchInput {
+    padding: 10px;
+    margin: 20px;
+    width: 50%;
+    background: #13151b;
+    border: 2px solid #181a20;
+    border-radius: 5px;
+    color: white;
+}
+.hide {
+    display: none;
+}
+textarea:focus,
+input:focus {
+    outline: 2px solid #f59e0b;
+}
+.logo {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+width: 40%;
+}
