@@ -1,6 +1,5 @@
 [![alt text](https://i.imgur.com/e1CuvGA.png)](https://dorbenabu.co.il)
 
-
 # Landing Pages Showcase
 
 Welcome to my Landing Pages Showcase project! This repository contains a collection of six uniquely designed, responsive landing pages, including a main webpage that serves as the showcase hub. Each landing page is crafted to provide an engaging user experience across various devices and screen sizes.
@@ -19,8 +18,6 @@ To get started with this project, follow these steps:
 
 2. **Navigate to the Project Directory**
 
-
-
 3. **Open the Main Webpage**
 
 Open `index.html` in your preferred browser to view the main showcase page.
@@ -35,6 +32,17 @@ The project includes the following landing pages:
 4. Landing Page 4 - Free consultation.
 5. Landing Page 5 - Good coffee for a good morning.
 6. Landing Page 6 - Here & Now.
+
+## Explore Each Javascript Project
+
+The project includes the following pages:
+
+1. JS Project 1 - Calculator.
+2. JS Project 2 - Weather.
+3. JS Project 3 - Todo.
+4. JS Project 4 - Paldex.
+5. JS Project 5 - Tic Tac Toe.
+6. JS Project 6 - Calander.
 
 ## Technologies Used
 
